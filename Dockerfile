@@ -35,3 +35,8 @@ cd setuptools-39.0.1 && \
 python2.7 setup.py install && \ 
 curl https://bootstrap.pypa.io/get-pip.py | python2.7 - && \ 
 pip install pipenv
+
+COPY ["terraform", "vault", "/usr/local/bin/"]
+
+RUN chmod +x /usr/local/bin/terraform &&\
+    chmod +x /usr/local/bin/vault
