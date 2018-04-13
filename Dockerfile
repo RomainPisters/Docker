@@ -13,13 +13,14 @@ RUN yum -y update && \
     tar \ 
     wget \ 
     zlib-dev \
-    unzip
+    unzip \
+    which
 
 # Install python2.7.14 
 RUN cd /tmp && \ 
-    wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz && \ 
-    tar xvfz Python-2.7.14.tgz && \ 
-    cd Python-2.7.14 && \ 
+    wget https://www.python.org/ftp/python/2.7/Python-2.7.tgz && \ 
+    tar xvfz Python-2.7.tgz && \ 
+    cd Python-2.7 && \ 
     ./configure --prefix=/usr/local && \ 
     make && \ 
     make altinstall
