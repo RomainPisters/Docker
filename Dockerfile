@@ -39,4 +39,7 @@ pip install pipenv
 COPY ["terraform", "vault", "/usr/local/bin/"]
 
 RUN chmod +x /usr/local/bin/terraform &&\
-    chmod +x /usr/local/bin/vault
+    chmod +x /usr/local/bin/vault && \
+    mkdir ~/.ssh && \
+    touch ~/.ssh/id_rsa && \
+    chmod 600 ~/.ssh/id_rsa
