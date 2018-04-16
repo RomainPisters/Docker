@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 alias _bootstrap='_CI/scripts/bootstrap'
 alias _lint='_CI/scripts/lint'
 alias _test='_CI/scripts/test'
